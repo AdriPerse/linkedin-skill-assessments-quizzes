@@ -244,10 +244,10 @@ vbound<-cbind(v1,v2)
 
 `Cpeople <- ournames %in% grep("^C", ournames, value=TRUE)`
 
-- [ ] records where the first character is a C
+- [x] records where the first character is a C
 - [ ] any record with a value containing a C
 - [ ] TRUE or FALSE, depending on whether any character in ournames is C
-- [x] TRUE and FALSE values, depending on whether the first character in an ournames record is C
+- [ ] TRUE and FALSE values, depending on whether the first character in an ournames record is C
 
 #### Q27. What is the value of names(v[4])?
 
@@ -656,3 +656,62 @@ Results: [1] "GHW BUsh" "Clinton" "Obama"
 - [ ] ()OPTIONS(max.print=5)
 - [ ] ()OPTIONS(continue="... ",
 - [x] ()OPTIONS(stringAsFactors=TRUE
+
+#### Q61. Which statement provides information on the names and data types of the variables in a data frame named mydata?
+
+- [ ] info(mydata)
+- [ ] classes (mydata)
+- [x] str(mydata)
+- [ ] scope (mydata)
+
+#### Q62. What is the principal difference between an array and a matrix?
+
+- [ ] An array is a subtype of the data frame, while a matrix is a separate type entirely.
+- [ ] A matrix may contain numeric values only, while an array can mix different types of values.
+- [ ] A matrix can have columns of different lengths, but an array's columns must all be the same length. 
+- [x] A matrix has two dimensions, while an array can have three or more dimensions.
+
+#### Q63. Review line 1. What does the statement on line 3 return?
+
+```r
+1  mtrx <- matrix(1 : 6, 3, 2)
+2 
+3 mtrx[, -1]
+```
+- [ ]:
+
+``` [1] 4 5 6 ```
+
+- [x]:
+
+```
+  [ ,2]
+[1, ]    4
+[2, ]    5
+[3, ]    6 
+```
+
+- [ ]:
+
+```
+      [ ,2]
+[1, ]    1
+[2, ]    2
+[3, ]    3
+```
+- [ ]:
+
+```
+      [ ,1]
+[1, ]    4
+[2, ]    5
+[3, ]    6
+```
+
+
+#### Q64. ou have data on the degree of approval for a ballot measure from Democrats, Republicans, and Independents. To test the statistical significance of the difference between any of the party means, which R function should you use?
+
+- [ ] t.test {stats}
+- [x] anova.lm {stats}
+- [ ] TTestA {DescTools}
+- [ ] power.t.test {stats}
